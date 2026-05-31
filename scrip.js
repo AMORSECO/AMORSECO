@@ -1,0 +1,67 @@
+:root {
+    --bg-dark: #11141a;
+    --text-light: #f5f6f8;
+    --accent-gold: #c9a054;
+    --accent-green: #1b4d3e;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
+
+/* [1] Sticky Navigation & Progress Bar */
+.progress-container { width: 100%; height: 4px; background: #222; position: fixed; top: 0; z-index: 1000; }
+.progress-bar { height: 4px; background: var(--accent-gold); width: 0%; }
+.sticky-nav { position: sticky; top: 0; background: rgba(17, 20, 26, 0.95); display: flex; justify-content: space-between; padding: 20px; z-index: 999; border-bottom: 1px solid #222; }
+.nav-links a { color: var(--text-light); text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+.nav-links a:hover { color: var(--accent-gold); }
+
+/* [3] Hero & Video Background */
+.hero-section { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.video-background { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -2; }
+.video-background video { width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: -1; }
+.hero-content { max-width: 800px; padding: 20px; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 20px; letter-spacing: -1px; }
+button { padding: 12px 28px; font-size: 1rem; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; margin: 10px; border-radius: 4px; }
+.btn-primary { background: var(--accent-green); color: white; }
+.btn-secondary { background: transparent; color: white; border: 2px solid white; }
+.btn-primary:hover { background: #256653; }
+.btn-secondary:hover { background: white; color: black; }
+
+/* [4] Tabs System */
+.section-container { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+.dark-bg { background-color: #171c24; max-width: 100%; }
+.tabs-container { display: flex; gap: 10px; margin-bottom: 30px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+.tab-btn { background: transparent; color: #888; border: none; font-size: 1.1rem; padding: 10px 20px; }
+.tab-btn.active { color: var(--accent-gold); border-bottom: 2px solid var(--accent-gold); }
+.tab-content { display: none; }
+.tab-content.active { display: block; animation: fadeIn 0.5s ease; }
+.trail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+.trail-map img { width: 100%; border-radius: 8px; border: 1px solid #333; }
+
+/* [5] Accordion Logistics */
+.accordion { background: #222b36; margin-bottom: 15px; border-radius: 6px; overflow: hidden; }
+summary { padding: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer; outline: none; list-style: none; }
+.accordion-content { padding: 0 20px 20px 20px; color: #ccc; line-height: 1.6; }
+
+/* [6] Flip Cards Gear Grid */
+.gear-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 40px; }
+.flip-card { background: transparent; width: 300px; height: 200px; perspective: 1000px; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.6s; transform-style: preserve-3d; }
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
+.flip-card-front { background-color: #222; color: white; border: 1px solid #333; }
+.flip-card-back { background-color: var(--accent-gold); color: black; transform: rotateY(180deg); }
+
+/* Modals & Lightbox */
+.lightbox, .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); align-items: center; justify-content: center; }
+.lightbox-content, .modal-content { position: relative; width: 80%; max-width: 800px; background: var(--bg-dark); padding: 20px; border-radius: 8px; }
+.close-btn, .close-modal { position: absolute; top: -40px; right: 0; color: white; font-size: 30px; cursor: pointer; }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@media (max-width: 768px) { .trail-grid { grid-template-columns: 1fr; } .hero-content h1 { font-size: 2rem; } }
