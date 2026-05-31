@@ -75,8 +75,8 @@ summary { padding: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer; o
 /* Esto ajusta el texto solo cuando la pantalla es menor a 768px (celulares y tablets) */
 @media (max-width: 768px) {
     .flip-card-back {
-        font-size: 0.8rem; /* Tamaño más pequeño para que no se salga */
-        padding: 10px;    /* Menos espacio interno para ganar espacio */
+        font-size: 0.5rem; /* Tamaño más pequeño para que no se salga */
+        padding: 5px;    /* Menos espacio interno para ganar espacio */
         line-height: 1.1; /* Texto más compacto */
     }
 }
