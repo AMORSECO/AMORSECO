@@ -72,3 +72,11 @@ summary { padding: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer; o
 
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 @media (max-width: 768px) { .trail-grid { grid-template-columns: 1fr; } .hero-content h1 { font-size: 2rem; } }
+/* Esto ajusta el texto solo cuando la pantalla es menor a 768px (celulares y tablets) */
+@media (max-width: 768px) {
+    .flip-card-back {
+        font-size: 0.8rem; /* Tamaño más pequeño para que no se salga */
+        padding: 10px;    /* Menos espacio interno para ganar espacio */
+        line-height: 1.1; /* Texto más compacto */
+    }
+}
