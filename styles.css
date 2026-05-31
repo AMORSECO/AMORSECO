@@ -58,7 +58,7 @@ summary { padding: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer; o
 .flip-card-front { background-color: #222; color: white; border: 1px solid #333; }
 .flip-card-back {
     background-color: red(--accent-gold);
-    color: black;
+    color: red;
     transform: rotateY(180deg);
     padding: 5px; /
     font-size: 0.4rem; 
