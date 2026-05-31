@@ -57,7 +57,7 @@ summary { padding: 20px; font-size: 1.2rem; font-weight: 600; cursor: pointer; o
 .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; box-sizing: border-box; }
 .flip-card-front { background-color: #222; color: white; border: 1px solid #333; }
 .flip-card-back {
-    background-color:white(--accent-gold);
+    background-color:white!important(--accent-gold);
     color: red;
     transform: rotateY(180deg);
     padding: 5px; /
