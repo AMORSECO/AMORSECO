@@ -1,150 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amorseco Natural | Alpine Expeditions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Tierra de nieve y sol</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- [1] Barra de navegación y progreso -->
-    <div class="progress-container"><div class="progress-bar" id="myBar"></div></div>
-    <nav class="sticky-nav">
-        <div class="logo">AMORSECO NATURAL</div>
-        <div class="nav-links">
-            <a href="#hero">Overview</a>
-            <a href="#trails">Trails</a>
-            <a href="#logistics">Logistics</a>
-            <a href="#gear">Gear</a>
-        </div>
-    </nav>
-
-    <!-- [3] Hero con video de fondo y reproductor bajo de manda -->
-    <header id="hero" class="hero-section">
-        <div class="video-background">
-            <video autoplay loop muted playsinline src="assets/hero-loop.mp4"></video>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>EL COCUY NATIONAL PARK:<br> Witness the Colombian Glaciers</h1>
-            <p>Trek El Cocuy National Park with a mountain guide and filmmaker who documents its rapid transformation.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="openModal()">Book July Trek</button>
-                <button class="btn-secondary" onclick="openModal()">Get a Custom Private Quote</button>
-            </div>
-        </div>
+    <header class="main-title">
+        <h1>Tierra de nieve y sol</h1>
     </header>
 
-    <!-- [3] Lightbox oculto para el video documental largo -->
-    <div id="videoLightbox" class="lightbox" onclick="closeLightbox()">
-        <div class="lightbox-content">
-            <span class="close-btn">&times;</span>
-            <iframe id="docVideo" src="https://www.youtube.com/embed/aQbolOpy-dI?enablejsapi=1" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <!-- [4] Selector interactivo de senderos (Tabs) -->
-    <section id="trails" class="section-container">
-        <h2>Choose Your Ascent</h2>
-        <div class="tabs-container">
-            <button class="tab-btn active" onclick="switchTab(event, 'pulpito')">Púlpito del Diablo</button>
-            <button class="tab-btn" onclick="switchTab(event, 'laguna')">Laguna Grande</button>
-            <button class="tab-btn" onclick="switchTab(event, 'ritacuba')">Ritacuba</button>
-        </div>
-
-        <div id="pulpito" class="tab-content active">
-            <div class="trail-grid">
-                <div>
-                    <h3>Púlpito del Diablo</h3>
-                    <p class="metrics"><strong>Distance:</strong> 17.2 km (Round-trip) | <strong>Max Elevation:</strong> 4,800 m</p>
-                    <p>Crosses the Lagunillas Valley, leading to the massive, square rock structure sitting on the edge of the Pan de Azúcar glacier.</p>
-                </div>
-                <div class="trail-map"><img src="assets/mapa-pulpito.png" alt="Pulpito Map"></div>
-            </div>
-        </div>
-
-        <div id="laguna" class="tab-content">
-            <div class="trail-grid">
-                <div>
-                    <h3>Laguna Grande</h3>
-                    <p class="metrics"><strong>Distance:</strong> 15.8 km (Round-trip) | <strong>Max Elevation:</strong> 4,600 m</p>
-                    <p>A demanding trail offering panoramic views of the southern Sierra Nevada and high-altitude glacial lakes. Optional: +2.5 km to view the Concavo glacier.</p>
-                </div>
-                <div class="trail-map"><img src="assets/mapa-laguna.png" alt="Laguna Map"></div>
-            </div>
-        </div>
-
-        <div id="ritacuba" class="tab-content">
-            <div class="trail-grid">
-                <div>
-                    <h3>Ritacuba Blanco</h3>
-                    <p class="metrics"><strong>Distance:</strong> 15.3 km (Round-trip) | <strong>Max Elevation:</strong> 4,970 m</p>
-                    <p>A direct alpine approach to the base of Ritacuba Blanco (5,330 m), the highest summit in Colombia's Eastern Andes.</p>
-                </div>
-                <div class="trail-map"><img src="assets/mapa-ritacuba.png" alt="Ritacuba Map"></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [5] Acordeón desplegable de logística -->
-    <section id="logistics" class="section-container dark-bg">
-        <h2>Logistics & Park Protocols</h2>
-        
-        <details class="accordion">
-            <summary>Official Park Fees Breakdown</summary>
-            <div class="accordion-content">
-                <p><strong>Mandatory High-Altitude Insurance:</strong> $13,700 COP per day.</p>
-                <p><strong>Foreigner Park Entry Permit:</strong> $102,500 COP (Valid for a 4-day window).</p>
-                <p><strong>Private 4x4 Overland Transport:</strong> 1-hour drive each way from the village to the trailheads.</p>
-            </div>
-        </details>
-
-        <details class="accordion">
-            <summary>The Mandatory Briefing Protocol</summary>
-            <div class="accordion-content">
-                <p>To validate your physical permit, National Parks requires a mandatory 15-minute virtual induction briefing (held daily at 8:00 AM and 4:00 PM). I will manage your registration queue, but you must attend this session live via the connection link we will share over WhatsApp.</p>
-            </div>
-        </details>
-    </section>
-
-    <!-- [6] Tarjetas Flip-Cards para el equipo técnico -->
-    <section id="gear" class="section-container">
-        <h2>Expedition Readiness Rules</h2>
-        <div class="gear-grid">
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>🥾 Footwear</h3>
-                        <p>Hover or Tap for Rules</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Boot Policy</h3>
-                        <p>Must use broken-in trekking boots. Do not wear brand-new or heavily worn-out footwear; the abrasive moraine rock will damage weak soles.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                    <div class="flip-card-front">
-                        <h3>☀️ Equatorial Sun</h3>
-                        <p>Hover or Tap for Rules</p>
-                    </div>
-                    <div class="flip-card-back">
-                        <h3>Sun Protection</h3>
-                        <p>The tropical solar radiation is severe. High-factor sunscreen, polarized sunglasses, long-sleeve tech shirt, and a cap are non-negotiable.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- [7] Formulario de captura integrado (Modal Overlay) -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
-            <h2>Custom Expedition Quote</h2>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeFdJSR1nf6GQ2l9Ioi4r11TPR_WlR5_Igsbk9ARBpcY5VETA/viewform?embedded=true" width="100%" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div class="banner-container" id="banner">
+        <h2 id="trail-name">SENDEROS</h2>
+        <div class="controls">
+            <button onclick="changeTrail('Púlpito', '#FF883E')">Púlpito</button>
+            <button onclick="changeTrail('Laguna', '#017100')">Laguna</button>
+            <button onclick="changeTrail('Ritacuba', '#004D80')">Ritacuba</button>
         </div>
     </div>
 
