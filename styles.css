@@ -1,29 +1,28 @@
-body { margin: 0; padding: 0; font-family: sans-serif; background: white; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #fcfcfc; padding: 40px; }
 
-.titulo-principal { 
-    text-align: center; 
-    text-transform: uppercase; 
-    font-size: 3rem; 
-    margin-top: 50px; 
-}
+.main-header { text-align: center; margin-bottom: 40px; }
+.main-header h1 { font-size: 3.5rem; font-weight: 700; color: #1d1d1f; text-transform: uppercase; margin-bottom: 10px; }
+.subtitle { font-size: 1.2rem; color: #86868b; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
 
-.contenedor-senderos { text-align: center; margin-top: 40px; }
-.etiqueta-senderos { text-transform: uppercase; font-weight: bold; margin-bottom: 20px; color: #333; }
-
-.fila-tarjetas { 
+.cards-container { 
     display: flex; 
     justify-content: center; 
-    gap: 20px; 
+    gap: 30px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
-.tarjeta { 
-    width: 250px; 
-    height: 350px; 
+.card { 
+    width: 300px; 
+    height: 400px; 
     border-radius: 20px; 
     display: flex; 
     align-items: flex-end; 
     justify-content: center; 
-    padding-bottom: 20px; 
+    padding-bottom: 30px; 
     color: white; 
-    font-size: 1.2rem; 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
