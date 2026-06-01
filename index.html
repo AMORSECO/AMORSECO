@@ -1,34 +1,22 @@
-* { margin: 0; padding: 0; box-sizing: border-box; } /* Reseteo total */
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación estándar -->
+    <link rel="stylesheet" href="style.css"> <!-- Vincula el CSS -->
+    <title>Tierra de nieve y sol</title>
+</head>
+<body>
+    <header class="header">
+        <h1>TIERRA DE NIEVE Y SOL</h1> <!-- Título principal -->
+        <p>SENDEROS</p> <!-- Subtítulo -->
+    </header>
 
-body { 
-    font-family: -apple-system, sans-serif; 
-    width: 100%; 
-    padding: 20px; 
-}
+    <main class="contenedor-tarjetas">
+        <div class="tarjeta" style="background-color: #FF883E;">Púlpito</div>
+        <div class="tarjeta" style="background-color: #017100;">Laguna</div>
+        <div class="tarjeta" style="background-color: #004D80;">Ritacuba</div>
+    </main>
 
-.header { 
-    text-align: center; /* CENTRADO: Alinea el título y subtítulo */
-    padding: 50px 0; 
-}
-
-.header h1 { font-size: 3rem; text-transform: uppercase; }
-
-.contenedor-tarjetas { 
-    display: flex; /* Alineación horizontal */
-    justify-content: center; /* CENTRADO: Alinea las tarjetas en el medio */
-    gap: 30px; /* Espaciado uniforme */
-    flex-wrap: wrap; /* Adaptabilidad a pantallas pequeñas */
-}
-
-.tarjeta { 
-    width: 250px; 
-    height: 350px; 
-    border-radius: 20px; /* Bordes redondeados para un aspecto moderno */
-    display: flex; 
-    align-items: flex-end; /* Alinea el texto al fondo */
-    justify-content: center; /* Centra el texto horizontalmente */
-    padding-bottom: 20px; 
-    color: white; 
-    font-weight: bold; 
-    cursor: pointer; 
-}
+    <script src="script.js"></script> <!-- Vincula el JS -->
+</body>
+</html>
