@@ -2,25 +2,27 @@
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background-color: #f5f5f5; }
 
 .main-title { padding: 60px 20px; text-align: center; }
-.main-title h1 { font-size: 3.5rem; color: #000; font-weight: 700; text-transform: uppercase; }
+.main-title h1 { font-size: 3rem; font-weight: 600; text-transform: uppercase; letter-spacing: -1px; }
 
-.lineup-container { padding: 40px 20px; text-align: center; }
-.nav-label { font-size: 1rem; font-weight: 600; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 2px; color: #555; }
+.lineup { padding: 40px 20px; text-align: center; }
+.nav-label { font-size: 0.9rem; font-weight: 600; color: #555; margin-bottom: 20px; text-transform: uppercase; }
 
-.cards-wrapper { 
+.cards-container { 
     display: flex; 
     justify-content: center; 
-    gap: 30px; 
+    gap: 20px; 
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
-.trail-card { 
-    width: 300px; 
-    height: 450px; 
-    border-radius: 40px; /* Bordes tipo Apple */
+.card { 
+    flex: 1; 
+    height: 400px; 
+    border-radius: 30px; 
     display: flex; 
-    align-items: center; 
-    justify-content: center; 
+    align-items: flex-end; 
+    padding: 30px; 
     color: white; 
     font-size: 1.5rem; 
-    font-weight: bold;
+    font-weight: 600;
 }
